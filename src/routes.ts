@@ -12,10 +12,8 @@ import {
   removeFootCompetitors
 } from "./controllers/FootCompetitorController"
 
-
-// import {create,randomDouble} from "./controllers/DoubleController"
 import DoubleController from "./controllers/DoubleController"
-
+import Random from "./repositories/random"
 
 const router = Router();
 
@@ -33,7 +31,7 @@ router.post("/foot-competitors", createFootCompetitors);
 router.put("/foot-competitors/:id", updateFootCompetitors);
 router.delete("/foot-competitors/:id", removeFootCompetitors);
 
-router.post("/double",DoubleController.create,DoubleController.random)
+router.post("/double",DoubleController.create,Random.random)
 
 
 
